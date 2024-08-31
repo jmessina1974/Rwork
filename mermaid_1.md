@@ -7,29 +7,29 @@ classDiagram
         +boolean isAvailable()
     }
 
-    class Member {
+    class Miembro {
         +String name
         +String memberId
         +borrowBook(Book book)
         +returnBook(Book book)
     }
 
-    class Librarian {
+    class Bibliotecario {
         +String name
         +String employeeId
         +addBook(Book book)
         +removeBook(Book book)
     }
 
-    class Library {
+    class Biblioteca {
         +String name
         +List<Book> books
         +List<Member> members
         +List<Librarian> librarians
-        +addMember(Member member)
-        +removeMember(Member member)
+        +addMember(Member miembro)
+        +removeMember(Member miembro)
     }
 
-    Libro --> Library : Contiene
-    Member --> Library : Registra
-    Librarian --> Library : Administra
+    Libro --> Biblioteca : Contiene
+    Miembro --> Biblioteca : Registra
+    Bibliotecario --> Biblioteca : Administra

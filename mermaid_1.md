@@ -7,6 +7,12 @@ classDiagram
         +boolean isAvailable()
     }
 
+class Revista {
+        +String titulo
+        +String autores
+        +String isbn
+        +boolean isAvailable()
+    }
     class Miembro {
         +String name
         +String memberId
@@ -30,6 +36,7 @@ classDiagram
         +removeMember(Member miembro)
     }
 
+    Revista --> Biblioteca : Contiene
     Libro --> Biblioteca : Contiene
     Miembro --> Biblioteca : Registra
     Bibliotecario --> Biblioteca : Administra
